@@ -5,20 +5,24 @@ Record your responses inside the fenced code blocks below each question.
 1.  Give an example of a visual hierarchy that could be modeled with components.
 
     ```md
-    <!-- your response here -->
+    In the Listr App, the overall Listr (list of lists) was a componenet, as were the individual lists (e.g., Favorite Things).
     ```
 
 1.  What is the command to generate a new component called '`my-map`'?
 
     ```sh
-    # your response here
+    ember g component my-map
     ```
 
 1.  What files are edited to produce a component, and what are their
     responsibilities?
 
     ```md
-    <!-- your response here -->
+    As an example, for the item component:
+    * app/components/listr-list/item/component.js
+      * for tying the item component to certain behvaiors -> striking out item text on click
+    * app/components/listr-list/item/template.hbs
+      * for templating the html markup -> creating a bullet point list of items
     ```
 
 1.  Suppose you have a component '`my-contact`', which is loaded from
@@ -26,7 +30,7 @@ Record your responses inside the fenced code blocks below each question.
     the syntax for loading this component inside that template?
 
     ```html
-    <!-- your response here -->
+    {{my-contact contact=model}}
     ```
 
     Each contact has multiple phone numbers. Suppose you also have '`my-phone`'
@@ -35,5 +39,5 @@ Record your responses inside the fenced code blocks below each question.
     pass it data?
 
     ```html
-    <!-- your response here -->
+    {{my-contact/my-phone contact=contact}}
     ```
